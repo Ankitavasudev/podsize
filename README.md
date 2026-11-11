@@ -18,8 +18,12 @@ built from [`examples/pods.json`](examples/pods.json).
 ## Install
 
 ```bash
-go install github.com/Ankitavasudev/k8s-pod-recommender@v0.2.0
+go install github.com/Ankitavasudev/k8s-pod-recommender@v0.2.1
 ```
+
+Prefer a prebuilt binary? Every tag ships Linux, macOS and Windows builds
+(amd64 + arm64) on the [releases page](https://github.com/Ankitavasudev/k8s-pod-recommender/releases),
+built with [GoReleaser](https://goreleaser.com).
 
 Go 1.21 or newer, and no third-party modules. `go install` names the binary after
 the module, so the command is `k8s-pod-recommender`. From a clone,
