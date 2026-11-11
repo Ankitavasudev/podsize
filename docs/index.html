@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>k8s-pod-recommender — run the recommender in your browser</title>
-<meta name="description" content="Paste pod specs and get the same conservative verdicts the k8s-pod-recommender CLI gives: fix / set / tighten / investigate / watch / keep. Runs entirely in the browser — no metrics server needed.">
+<title>podsize — run the recommender in your browser</title>
+<meta name="description" content="Paste pod specs and get the same conservative verdicts the podsize CLI gives: fix / set / tighten / investigate / watch / keep. Runs entirely in the browser — no metrics server needed.">
 <style>
 :root{--bg:#0d1117;--panel:#161b22;--panel-2:#1c2230;--text:#e6edf3;--muted:#8b949e;--line:#30363d;--fix:#f85149;--set:#d29922;--investigate:#a371f7;--tighten:#58a6ff;--watch:#3fb950;--keep:#6e7681}
 *{box-sizing:border-box}
@@ -60,14 +60,14 @@ code{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap
 
   <div class="top">
     <div>
-      <h1><code>k8s-pod-recommender</code></h1>
+      <h1><code>podsize</code></h1>
       <div class="sub">Same rules as the CLI, running in your browser · conservative, no guessed numbers</div>
     </div>
     <div class="actions">
       <button class="btn" id="sampleBtn" title="Load 12 sample pods">Sample pods</button>
       <button class="btn" id="copyBtn" title="Copy JSON recommendations">Copy JSON</button>
       <button class="btn" id="soundBtn" title="Toggle sound">Sound</button>
-      <a class="btn" href="https://github.com/Ankitavasudev/k8s-pod-recommender" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://github.com/Ankitavasudev/podsize" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 
@@ -95,7 +95,7 @@ code{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap
   </section>
 
   <div class="foot">
-    <span>Powered by the exact <code>pkg/recommender</code> rules · exit codes mirror the CLI · <a href="https://github.com/Ankitavasudev/k8s-pod-recommender" style="color:var(--tighten)">source</a></span>
+    <span>Powered by the exact <code>pkg/recommender</code> rules · exit codes mirror the CLI · <a href="https://github.com/Ankitavasudev/podsize" style="color:var(--tighten)">source</a></span>
     <span><span class="kbd">Ctrl</span>+<span class="kbd">Enter</span> analyze</span>
   </div>
 </div>

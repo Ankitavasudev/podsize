@@ -14,8 +14,8 @@ Thank you for your interest in contributing!
 
 `ash
 # Clone the repo
-git clone https://github.com/your-username/k8s-pod-recommender.git
-cd k8s-pod-recommender
+git clone https://github.com/your-username/podsize.git
+cd podsize
 
 # Run tests
 go test -v ./...

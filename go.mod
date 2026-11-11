@@ -1,3 +1,3 @@
-module github.com/Ankitavasudev/k8s-pod-recommender
+module github.com/Ankitavasudev/podsize
 
 go 1.21

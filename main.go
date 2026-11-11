@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Ankitavasudev/k8s-pod-recommender/pkg/recommender"
+	"github.com/Ankitavasudev/podsize/pkg/recommender"
 )
 
 // podList mirrors the parts of `kubectl get pods -o json` we care about.

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Ankitavasudev/k8s-pod-recommender/pkg/recommender"
+	"github.com/Ankitavasudev/podsize/pkg/recommender"
 )
 
 const samplePods = `{

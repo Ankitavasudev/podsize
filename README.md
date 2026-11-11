@@ -1,4 +1,4 @@
-﻿# k8s-pod-recommender
+# podsize
 
 Read a cluster's pod specs and say which ones have resource settings worth
 changing, and why. It works on live output from `kubectl`, on a saved
@@ -6,28 +6,28 @@ changing, and why. It works on live output from `kubectl`, on a saved
 access.
 
 ```bash
-k8s-pod-recommender                          # every namespace, live
-k8s-pod-recommender -n payments              # one namespace
-k8s-pod-recommender -f examples/pods.json    # a saved capture, no cluster needed
-k8s-pod-recommender -f examples/pods.json -o html > report.html
+podsize                          # every namespace, live
+podsize -n payments              # one namespace
+podsize -f examples/pods.json    # a saved capture, no cluster needed
+podsize -f examples/pods.json -o html > report.html
 ```
 
-[See a generated report](https://ankitavasudev.github.io/k8s-pod-recommender/),
+[See a generated report](https://ankitavasudev.github.io/podsize/),
 built from [`examples/pods.json`](examples/pods.json).
 
 ## Install
 
 ```bash
-go install github.com/Ankitavasudev/k8s-pod-recommender@v0.2.1
+go install github.com/Ankitavasudev/podsize@v0.3.0
 ```
 
 Prefer a prebuilt binary? Every tag ships Linux, macOS and Windows builds
-(amd64 + arm64) on the [releases page](https://github.com/Ankitavasudev/k8s-pod-recommender/releases),
+(amd64 + arm64) on the [releases page](https://github.com/Ankitavasudev/podsize/releases),
 built with [GoReleaser](https://goreleaser.com).
 
 Go 1.21 or newer, and no third-party modules. `go install` names the binary after
-the module, so the command is `k8s-pod-recommender`. From a clone,
-`go build -o k8s-pod-recommender .` produces the same binary.
+the module, so the command is `podsize`. From a clone,
+`go build -o podsize .` produces the same binary.
 
 ## What it does
 
@@ -89,9 +89,9 @@ to use in CI. The stderr message includes kubectl's own last line instead of jus
 
 ```bash
 kubectl get pods -o json > pods.json
-k8s-pod-recommender -f pods.json
+podsize -f pods.json
 
-kubectl get pods -n prod -o json | k8s-pod-recommender -f - -o json
+kubectl get pods -n prod -o json | podsize -f - -o json
 ```
 
 This is the mode used by the demo and by CI, and it is how you review a cluster
